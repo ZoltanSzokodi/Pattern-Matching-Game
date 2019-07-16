@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 20rem;
+    width: 20rem;
+    border: 1px solid black;
+}
+
+.box {
+    width: 50%;
+    height: 50%;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.active {
+    border: 1px solid red;
+    color: red;
+}

@@ -1,7 +1,7 @@
 const message = document.querySelector('.message');
 const game_area = document.querySelector('.game-area');
 const button = document.querySelector('button');
-const game_colors = ['red', 'blue', 'green', 'yellow'];
+const game_colors = ['#FF4F76', '#36A5A5', '#5FF68E', '#FFD500'];
 
 // Global Variables
 let game_clicks = [];
@@ -71,7 +71,7 @@ function checkAnswer(event) {
         el.style.opacity = '1';
         setTimeout(function () {
             el.style.opacity = '0.5';
-        }, 200);
+        }, 300);
         if (user_clicks.length == game_clicks.length) {
             in_play = false;
             endGame();
@@ -83,9 +83,9 @@ function endGame() {
     button.disabled = false;
     if (user_clicks.toString() == game_clicks.toString()) {
         play_num++;
-        messager('Correct');
+        messager(`Correct! Level ${play_num - 1} unlocked`);
     } else {
-        messager('False');
+        messager('False. Try again');
     }
 }
 
